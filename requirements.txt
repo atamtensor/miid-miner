@@ -1,0 +1,11 @@
+# Base runtime for the miner (both backends).
+# bittensor pin follows upstream MIID-subnet @ c0ade1b.
+bittensor==10.5.0
+cyscale  # required by async-substrate-interface >= 1.6 (transitive dep of bittensor >= 10.3.0)
+numpy>=1
+Pillow>=9.0.0
+pillow-heif>=0.13.0
+requests
+pydantic>=2
+setuptools>=68,<82
+# Do NOT add substrate-interface (conflicts with cyscale; see upstream note).

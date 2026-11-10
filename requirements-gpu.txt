@@ -1,0 +1,7 @@
+# Local GPU backend (upstream FLUX pipelines). Needs a CUDA GPU with >= 8 GB VRAM
+# and a Hugging Face token with the FLUX model licences accepted.
+torch>=2
+diffusers>=0.30.0
+transformers>=4.40.0
+accelerate>=0.30.0
+safetensors

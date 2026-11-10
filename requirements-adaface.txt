@@ -1,0 +1,6 @@
+# Optional local identity pre-check (AdaFace), CPU is fine.
+# Also run scripts/setup_adaface.sh to fetch the AdaFace code and checkpoint.
+torch>=2  # CPU wheel is fine: pip install --extra-index-url https://download.pytorch.org/whl/cpu ...
+opencv-python-headless>=4.8.0
+pytorch-lightning>=2.0.0
+gdown

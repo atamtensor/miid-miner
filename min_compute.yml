@@ -1,0 +1,16 @@
+# Minimum compute for this fork (upstream min_compute.yml described the old LLM miner).
+version: 'fork-1.0'
+compute_spec:
+  miner_hosted:            # MIID_BACKEND=hosted (default on machines without CUDA)
+    cpu: {min_cores: 2, architecture: "x86_64 or arm64"}
+    gpu: {required: false}
+    memory: {min_ram_gb: 4}
+    storage: {min_space_gb: 10}
+    network: {inbound_tcp_port: 8091, bandwidth_mbps: 100}
+    external: "OpenAI-compatible image API key (default OpenRouter)"
+  miner_local_gpu:         # MIID_BACKEND=local (upstream FLUX pipelines)
+    cpu: {min_cores: 8}
+    gpu: {required: true, min_vram_gb: 8, recommended_vram_gb: 24}
+    memory: {min_ram_gb: 16}
+    storage: {min_space_gb: 80}
+    external: "Hugging Face token with the FLUX model licences accepted"
